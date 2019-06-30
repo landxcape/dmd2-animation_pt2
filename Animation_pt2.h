@@ -23,7 +23,7 @@ private:
     int width;
     int height;
     void delay_engine(unsigned int delay_val);
-    void drawPicture(unsigned int rows, unsigned int cols, unsigned int p[][], DMDGraphicsMode mode);
+    void drawPicture(unsigned int rows, unsigned int cols, unsigned int p[][]);
 };
 
 #endifs

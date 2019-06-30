@@ -7,7 +7,7 @@ Animation_pt2::Animation_pt2(DMDFrame &dmd, SPIDMD &dmdbright, int width, int he
 {
 }
 
-void Animation_pt2::drawPicture(unsigned int rows, unsigned int cols, unsigned int p[][], DMDGraphicsMode mode)
+void Animation_pt2::drawPicture(unsigned int rows, unsigned int cols, unsigned int p[][])
 {
     for (int y = 0; y < cols; y++)
     {
