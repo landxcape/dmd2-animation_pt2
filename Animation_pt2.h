@@ -12,18 +12,18 @@
 
 class Animation_pt2
 {
-    public:
+public:
     Animation_pt2(DMDFrame &dmdFrame, SPIDMD &dmd, int width, int height);
-    
-    private:
+
+private:
     // DMDFrame &dmdFrame;
     // SPIDMD &dmd;
     DMDFrame &dmd;
     SPIDMD &dmdbright;
     int width;
     int height;
-    void delay_engine(int delay_val);
-    // void drawPicture();
+    void delay_engine(unsigned int delay_val);
+    void drawPicture(unsigned int rows, unsigned int cols, unsigned int p[][], DMDGraphicsMode mode);
 };
 
-#endif
+#endifs
