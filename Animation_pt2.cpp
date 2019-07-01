@@ -7,11 +7,10 @@ Animation_pt2::Animation_pt2(DMDFrame &dmd, SPIDMD &dmdbright, int width, int he
 {
 }
 
-width = dmd.width;
-height = dmd.height;
-
 void Animation_pt2::drawPicture(int x, int y, uint16_t *p, uint16_t rows, uint16_t cols)
 {
+    width = dmd.width;
+    height = dmd.height;
     for (uint16_t j = 0; j < rows; j++)
     {
         for (uint16_t i = 0; i < cols; i++)
