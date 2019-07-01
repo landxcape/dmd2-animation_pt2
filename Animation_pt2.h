@@ -22,10 +22,10 @@ private:
     // SPIDMD &dmd;
     DMDFrame &dmd;
     SPIDMD &dmdbright;
-    uint16_t width;
-    uint16_t height;
+    int width;
+    int height;
     // void delay_engine(unsigned int delay_val);
-    void drawPicture(int x, int y, uint16_t p[][], uint16_t rows, uint16_t cols);
+    void drawPicture(int x, int y, uint16_t* p, uint16_t rows, uint16_t cols);
 };
 
-#endifs
+#endif
