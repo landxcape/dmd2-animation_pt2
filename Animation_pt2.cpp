@@ -17,7 +17,7 @@ void Animation_pt2::drawPicture(int x, int y, bool *p, uint8_t rows, uint8_t col
         {
             if (x + i >= 0 && x + i < width && y + j >= 0 && y + j < height)
             {
-                if (*(p + j * cols + i) > 0)
+                if (*(p + j * cols + i))
                     dmd.setPixel(x + i, y + j, GRAPHICS_ON);
                 else
                     dmd.setPixel(x + i, y + j, GRAPHICS_OFF);
