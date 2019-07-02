@@ -7,34 +7,6 @@ Animation_pt2::Animation_pt2(DMDFrame &dmd, SPIDMD &dmdbright, int width, int he
 {
 }
 
-void snakeGame(int move)
-{
-    width = dmd.width;
-    height = dmd.height;
-
-    uint16_t snakeLength = 1;
-    uint16_t score = 0;
-    y
-    start_snake_head_x = random(0, width);
-    start_snake_head_y = random(0, height);
-
-    snake_food_x = random(0, width);
-    snake_food_y = random(0, height);
-
-    switch (move)
-    {
-    case 0:
-        for (int i = 0; i < snakeLength; i++)
-        {
-
-        }
-        break;
-
-    default:
-        break;
-    }
-}
-
 void Animation_pt2::drawPicture(int x, int y, bool *p, uint8_t rows, uint8_t cols)
 {
     width = dmd.width;

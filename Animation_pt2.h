@@ -15,7 +15,6 @@ class Animation_pt2
 public:
     Animation_pt2(DMDFrame &dmdFrame, SPIDMD &dmd, int width, int height);
 
-    void snakeGame(int);
     uint8_t sunMidday(int, int);
 
 private:
