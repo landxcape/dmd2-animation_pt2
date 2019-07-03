@@ -27,7 +27,7 @@ private:
     uint16_t width;
     uint16_t height;
     // void delay_engine(unsigned int delay_val);
-    void drawPicture(int x, int y, uint16_t p[][], uint16_t rows, uint16_t cols);
+    void drawPicture(int x, int y, bool * p, uint8_t rows, uint8_t cols);
 };
 
-#endifs
+#endif
