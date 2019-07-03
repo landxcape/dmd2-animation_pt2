@@ -16,6 +16,7 @@ public:
     Animation_pt2(DMDFrame &dmdFrame, SPIDMD &dmd, int width, int height);
 
     uint8_t sunMidday(int, int);
+    uint8_t sunMorning(int, int);
 
 private:
     // DMDFrame &dmdFrame;
