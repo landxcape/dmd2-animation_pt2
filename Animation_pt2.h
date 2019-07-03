@@ -17,6 +17,7 @@ public:
 
     uint8_t sunMidday(int, int);
     uint8_t sunMorning(int, int);
+    uint8_t moonCrescent(int, int);
 
 private:
     // DMDFrame &dmdFrame;
