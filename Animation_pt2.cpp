@@ -25,6 +25,44 @@ void Animation_pt2::drawPicture(int x, int y, uint16_t p[][], uint16_t rows, uin
     }
 }
 
+void Animation_pt2::fadingEffect()
+{
+
+    for (int j = 0; j < 2; j++)
+    {
+        for (int i = 255; i > 50; i--)
+        {
+            dmdbright.setBrightness(i);
+            delay_engine(20);
+        }
+        for (int i = 50; i < 255; i++)
+        {
+            dmdbright.setBrightness(i);
+            delay_engine(20);
+        }
+    }
+
+    dmdbright.setBrightness(255);
+}
+
+void Animation_pt2::cleaningCurtain()
+{
+    for (int j = 0; j <= width * 32; j++)
+    {
+        for (int i = 0; i <= height * 16; i++)
+        {
+            dmd.setPixel(j, i, GRAPHICS_OFF);
+            dmd.setPixel((width * 32) - j, i, GRAPHICS_OFF);
+        }
+        delay_engine(10);
+        for (int i = 0; i <= height * 16; i++)
+        {
+            dmd.setPixel(j, i, GRAPHICS_OFF);
+            dmd.setPixel((width * 32) - j, i, GRAPHICS_OFF);
+        }
+    }
+}
+
 uint8_t Animation_pt2::sunMidday(int x, int y)
 {
     uint8_t rows = 16;

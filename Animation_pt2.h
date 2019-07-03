@@ -15,6 +15,11 @@ class Animation_pt2
 public:
     Animation_pt2(DMDFrame &dmdFrame, SPIDMD &dmd, int width, int height);
 
+    // effects
+    void fadingEffect();
+    void cleaningCurtain();
+
+    // pictures
     uint8_t sunMidday(int, int);
     uint8_t sunMorning(int, int);
     uint8_t moonCrescent(int, int);
