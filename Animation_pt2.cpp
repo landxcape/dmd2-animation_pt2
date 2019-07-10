@@ -7,13 +7,16 @@ Animation_pt2::Animation_pt2(DMDFrame &dmd, SPIDMD &dmdbright, int width, int he
 {
 }
 
+// *********************************************************************************************
+// effects
+
 void Animation_pt2::drawPicture(int x, int y, bool *p, uint8_t rows, uint8_t cols)
 {
     width = dmd.width;
     height = dmd.height;
-    for (int i = 0; i < rows; i++)
+    for (int j = 0; j < cols; j++)
     {
-        for (int j = 0; j < cols; j++)
+        for (int i = 0; i < rows; i++)
         {
             if (x + j >= 0 && x + j < width && y + i >= 0 && y + i < height)
                 if (*(p + i * cols + j) > 0)
@@ -58,6 +61,9 @@ void Animation_pt2::cleaningCurtain()
         delay(10);
     }
 }
+
+// *********************************************************************************************
+// pictures
 
 uint8_t Animation_pt2::sun(int x, int y, String type)
 {
@@ -190,6 +196,9 @@ uint8_t Animation_pt2::star(int x, int y)
 
     drawPicture(x, y, (bool *)star, rows, cols);
 }
+
+// *********************************************************************************************
+// static messages
 
 uint8_t Animation_pt2::starTailor(int x, int y, String type)
 {

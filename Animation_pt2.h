@@ -24,7 +24,7 @@ public:
     uint8_t moon(int, int, String);
     uint8_t star(int, int);
 
-    // static text
+    // static messages
     uint8_t starTailor(int, int, String);
 
 private:
