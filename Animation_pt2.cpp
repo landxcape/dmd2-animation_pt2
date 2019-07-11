@@ -16,14 +16,23 @@ void Animation_pt2::drawPicture(int x, int y, bool *p, uint8_t rows, uint8_t col
     height = dmd.height;
     for (int j = 0; j < cols; j++)
     {
-        for (int i = 0; i < rows; i++)
+        if (x + j >= 0)
         {
-            if (x + j >= 0 && x + j < width && y + i >= 0 && y + i < height)
-                if (*(p + i * cols + j) > 0)
-                    dmd.setPixel(x + j, y + i, GRAPHICS_ON);
-                else
-                    dmd.setPixel(x + j, y + i, GRAPHICS_OFF);
+            for (int i = 0; i < rows; i++)
+            {
+                if (y + i >= 0)
+                {
+                    if (*(p + i * cols + j) > 0)
+                        dmd.setPixel(x + j, y + i, GRAPHICS_ON);
+                    else
+                        dmd.setPixel(x + j, y + i, GRAPHICS_OFF);
+                }
+                else if (y + i < height)
+                    break;
+            }
         }
+        else if (x + j < width)
+            break;
     }
 }
 
