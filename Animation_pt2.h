@@ -20,12 +20,12 @@ public:
     void cleaningCurtain();
 
     // pictures
-    uint8_t sun(int, int, String);
-    uint8_t moon(int, int, String);
-    uint8_t star(int, int);
+    uint16_t sun(int, int, String);
+    uint16_t moon(int, int, String);
+    uint16_t star(int, int);
 
     // static messages
-    uint8_t starTailor(int, int, String);
+    uint16_t starTailor(int, int, String);
 
 private:
     // DMDFrame &dmdFrame;
@@ -34,10 +34,10 @@ private:
     SPIDMD &dmdbright;
     uint16_t width;
     uint16_t height;
-    uint8_t rows;
-    uint8_t cols;
+    uint16_t rows;
+    uint16_t cols;
     // void delay_engine(unsigned int delay_val);
-    void drawPicture(int x, int y, bool *p, uint8_t rows, uint8_t cols);
+    void drawPicture(int x, int y, bool *p, uint16_t rows, uint16_t cols);
 };
 
 #endif
