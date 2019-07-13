@@ -25,7 +25,7 @@ public:
     uint16_t star(int, int);
 
     // static messages
-    uint16_t starTailor(int, int, String);
+    uint16_t starTailors(int, int, String);
 
 private:
     // DMDFrame &dmdFrame;
