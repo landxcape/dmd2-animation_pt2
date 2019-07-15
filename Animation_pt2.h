@@ -20,12 +20,12 @@ public:
     void cleaningCurtain();
 
     // pictures
-    uint16_t sun(int, int, String);
-    uint16_t moon(int, int, String);
-    uint16_t star(int, int);
+    uint16_t sun(int, int, String type, String style = "none");
+    uint16_t moon(int, int, String type, String style = "none");
+    uint16_t star(int, int, String style = "none");
 
     // static messages
-    uint16_t starTailors(int, int, String);
+    uint16_t starTailors(int, int, String type, String style = "none");
 
 private:
     // DMDFrame &dmdFrame;
@@ -37,7 +37,7 @@ private:
     uint16_t rows;
     uint16_t cols;
     // void delay_engine(unsigned int delay_val);
-    void drawPicture(int x, int y, bool *p, uint16_t rows, uint16_t cols);
+    void drawPicture(int x, int y, bool *p, uint16_t rows, uint16_t cols, String style);
 };
 
 #endif
