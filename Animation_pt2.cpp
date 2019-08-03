@@ -86,11 +86,11 @@ void Animation_pt2::drawPicture(int x, int y, bool *p, uint16_t rows, uint16_t c
             {
                 for (uint16_t k = 0; k <= i - 1; k++)
                 {
+                    coll_pixels = false;
                     for (uint16_t j = 0; j < cols; j++)
                     {
                         if (x + j >= 0 && x + j <= width)
                         {
-                            coll_pixels = false;
                             if (*(p + (i - 1) * cols + j))
                             {
                                 coll_pixels = true;
@@ -176,24 +176,37 @@ void Animation_pt2::drawPicture(int x, int y, bool *p, uint16_t rows, uint16_t c
             }
         }
     }
-    else if (type == "expand-square")
+    else if (style == "expand-square")
     {
-        for (uint16_t j = cols / 2; j < cols; j++)
+        uint16_t b = cols / 2;
+        uint16_t a = rows / 2;
+        while (b < cols || a < rows)
         {
-            if (x + j >= 0 && x + j <= width)
+            if (x + b >= 0 && x + b <= width && y + a >= 0 && y + a <= height)
             {
-                for (uint16_t i = rows / 2; i < rows; i++)
+                for (uint16_t j = cols / 2; j <= b; j++)
                 {
-                    if (y + i >= 0 && y + i <= height)
+                    for (uint16_t i = rows / 2; i <= a; i++)
                     {
                         if (*(p + i * cols + j))
                             dmd.setPixel(x + j, y + i, GRAPHICS_ON);
+
+                        if (*(p + (rows - i - 1) * cols + j))
+                            dmd.setPixel(x + j, y + (rows - i - 1), GRAPHICS_ON);
+
+                        if (*(p + i * cols + (cols - j - 1)))
+                            dmd.setPixel(x + (cols - j - 1), y + i, GRAPHICS_ON);
+
                         if (*(p + (rows - i - 1) * cols + (cols - j - 1)))
                             dmd.setPixel(x + (cols - j - 1), y + (rows - i - 1), GRAPHICS_ON);
-                        delay(10);
                     }
                 }
+                delay(20);
             }
+            if (b < cols)
+                b++;
+            if (a < cols)
+                a++;
         }
     }
     else if (style == "invert")
@@ -2080,7 +2093,7 @@ uint16_t Animation_pt2::nec_new(int x, int y, String type, String style)
     {
         rows = 18;
         cols = 86;
-        static const bool nec_electronics_and_communication[cols][rows] = {
+        static const bool nec_electronics_and_communication[18][86] = {
             {0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
             {0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0},
             {0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 1, 1, 0, 0, 1, 1, 1, 1, 0, 0, 0, 1, 1, 1, 0, 1, 1, 1, 1, 0, 1, 1, 1, 1, 0, 0, 1, 1, 1, 1, 0, 0, 1, 1, 1, 1, 1, 0, 0, 1, 1, 0, 0, 1, 1, 1, 0, 0, 0, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0},
