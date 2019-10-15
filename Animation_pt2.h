@@ -34,6 +34,7 @@ public:
     uint16_t nec(int, int, String type, String style = "none");
     uint16_t nec_new(int, int, String type, String style = "none");
     uint16_t pkm(int, int, String type, String style = "none");
+    uint16_t rfr(int, int, String type, String style = "none");
 
 private:
     // DMDFrame &dmdFrame;
