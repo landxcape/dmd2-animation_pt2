@@ -30,6 +30,7 @@ public:
 
     // project specifics
     uint16_t starTailors(int, int, String type, String style = "none");
+    uint16_t hardford(int, int, String type, String style = "none");
     uint16_t diyoFoodland(int, int, String type, String style = "none");
     uint16_t unionLife(int, int, String type, String style = "none");
     uint16_t nec(int, int, String type, String style = "none");
