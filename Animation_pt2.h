@@ -24,6 +24,7 @@ public:
     uint16_t sun(int, int, String type, String style = "none");
     uint16_t moon(int, int, String type, String style = "none");
     uint16_t star(int, int, String style = "none");
+    uint16_t airplane(int, int, String style = "none");
 
     // icons
     uint16_t iconArt(int, int, String type, String style = "none");
