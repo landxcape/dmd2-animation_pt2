@@ -24,7 +24,7 @@ public:
     uint16_t sun(int, int, String type, String style = "none");
     uint16_t moon(int, int, String type, String style = "none");
     uint16_t star(int, int, String style = "none");
-    uint16_t airplane(int, int, String style = "none");
+    uint16_t consultancy(int, int, String type, String style = "none");
 
     // icons
     uint16_t iconArt(int, int, String type, String style = "none");
@@ -34,6 +34,7 @@ public:
     uint16_t hardford(int, int, String type, String style = "none");
     uint16_t diyoFoodland(int, int, String type, String style = "none");
     uint16_t unionLife(int, int, String type, String style = "none");
+    uint16_t jyotiLife(int, int, String type, String style = "none");
     uint16_t nec(int, int, String type, String style = "none");
     uint16_t nec_new(int, int, String type, String style = "none");
     uint16_t pkm(int, int, String type, String style = "none");
