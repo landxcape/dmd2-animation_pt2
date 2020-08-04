@@ -20,8 +20,6 @@ public:
     void cleaningCurtain();
     void strokeLines_horizontal(int start_x = 0, int start_y = 0, int end_x = 160, int stroke_width = 2, int stroke_length = 4, int stroke_gap = 4);
 
-    // test
-
     // pictures
     uint16_t sun(int, int, String type, String style = "none");
     uint16_t moon(int, int, String type, String style = "none");
