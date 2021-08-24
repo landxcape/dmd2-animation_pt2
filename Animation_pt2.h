@@ -36,12 +36,12 @@ public:
     // uint16_t unionLife(int, int, String type, String style = "none");
     // uint16_t jyotiLife(int, int, String type, String style = "none");
     // uint16_t nec(int, int, String type, String style = "none");
-    uint16_t nec_new(int, int, String type, String style = "none");
+    // uint16_t nec_new(int, int, String type, String style = "none");
     // uint16_t pkm(int, int, String type, String style = "none");
     // uint16_t rfr(int, int, String type, String style = "none");
     // uint16_t lmmcsl(int, int, String type, String style = "none");
     // uint16_t durga_bhawani(int, int, String type, String style = "none");
-    // uint16_t mausam_meat_mart(int, int, String type, String style = "none");
+    uint16_t mausam_meat_mart(int, int, String type, String style = "none");
 
 private:
     // DMDFrame &dmdFrame;
