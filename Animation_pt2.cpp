@@ -1377,7 +1377,7 @@ uint16_t Animation_pt2::hardford(int x, int y, String type, String style)
     }
     return cols;
 }
-
+**/
 uint16_t Animation_pt2::mausam_meat_mart(int x, int y, String type, String style)
 {
     if (type == "nep")
@@ -1443,7 +1443,7 @@ uint16_t Animation_pt2::mausam_meat_mart(int x, int y, String type, String style
     }
     return cols;
 }
-
+/**
 uint16_t Animation_pt2::diyoFoodland(int x, int y, String type, String style)
 {
     if (type == "logo")
@@ -3188,7 +3188,6 @@ uint16_t Animation_pt2::nec(int x, int y, String type, String style)
     }
     return cols;
 }
-**/
 
 uint16_t Animation_pt2::nec_new(int x, int y, String type, String style)
 {
@@ -3669,7 +3668,6 @@ uint16_t Animation_pt2::nec_new(int x, int y, String type, String style)
     return cols;
 }
 
-/**
 uint16_t Animation_pt2::rfr(int x, int y, String type, String style)
 {
     if (type == "rfr-nep")
